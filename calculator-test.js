@@ -1,4 +1,4 @@
-// Starter code from Springboard
+// Starter code provided by Springboard
 it('should calculate the monthly rate correctly', function () {
   const values = {
     amount: 100000,

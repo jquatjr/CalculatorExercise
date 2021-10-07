@@ -1,4 +1,4 @@
-// Starter code from Springboard
+// Starter code provided by Springboard
 
 window.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById("calc-form");
@@ -20,19 +20,19 @@ function getCurrentUIValues() {
 }
 
 function setupIntialValues() {
-  const values = { amount: 10000, years: 10, rate: 4.5 };
-  const amountUI = document.getElementById("loan-amount");
-  amountUI.value = values.amount;
-  const yearsUI = document.getElementById("loan-years");
-  yearsUI.value = values.years;
-  const rateUI = document.getElementById("loan-rate");
-  rateUI.value = values.rate;
+  const values = { amount: 150000, years: 15, rate: 3 };
+  const amountInput = document.getElementById("loan-amount");
+  amountInput.value = values.amount;
+  const yearsInput = document.getElementById("loan-years");
+  yearsInput.value = values.years;
+  const rateInput = document.getElementById("loan-rate");
+  rateInput.value = values.rate;
   update();
 }
 
 function update() {
-  const currentUIValues = getCurrentUIValues();
-  updateMonthly(calculateMonthlyPayment(currentUIValues));
+  const currentInputValues = getCurrentUIValues();
+  updateMonthly(calculateMonthlyPayment(currentInputValues));
 }
 
 function calculateMonthlyPayment(values) {
@@ -45,6 +45,6 @@ function calculateMonthlyPayment(values) {
 }
 
 function updateMonthly(monthly) {
-  const monthlyUI = document.getElementById("monthly-payment");
-  monthlyUI.innerText = "$" + monthly;
+  const monthlyInput = document.getElementById("monthly-payment");
+  monthlyInput.innerText = "$" + monthly;
 }
